@@ -1,0 +1,13 @@
+<div class="body-wrapper">
+  <div class="survey_description">
+
+  </div>
+
+  <div *ngFor='let survey of surveys' class="card card_survey">
+      <div class="card-body">
+        <h5 class="card-title">{{survey.title}}</h5>
+        <p class="card-text">{{survey.description}}</p>
+
+      </div>
+  </div>
+</div>
