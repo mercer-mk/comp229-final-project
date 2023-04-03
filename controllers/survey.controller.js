@@ -1,4 +1,5 @@
 const Survey = require('mongoose').model('survey');
+var ObjectID = require('mongodb').ObjectID;
 var sanitize = require('mongo-sanitize');
 var mongo = require('mongoose');
 var Schema = mongo.Schema;
@@ -20,39 +21,37 @@ exports.create = async function(req, res, next) {
 
 };
 
-exports.edit = (req, res, next) =>{
+exports.edit = async function (req, res, next) {
     try {
-        req.body = sanitize(req.body);
-        let id = req.body._id;
-        delete req.body._id;
-        Survey.findByIdAndUpdate(id, req.body, function(err, survey){
-            if (err){
-                return next(err);
-            }
-            res.status(200).send(survey);
-        });
+      const id = sanitize(req.body._id);
+      const updatedSurvey = await Survey.findByIdAndUpdate(id, req.body, { new: true });
+      if (!updatedSurvey) {
+        return res.status(404).send({ message: 'Survey not found' });
+      }
+      res.status(200).send(updatedSurvey);
     } catch (err) {
-        return next(err);
+      return next(err);
     }
-};
+  };
 
-exports.list = function(req, res, next) {
-    Survey.find({}, function(err, data){
-        if(err){
-            res.send(err)
-        }else{
-            res.send(data)
-        }
-    });
-};
+  exports.list = async function (req, res, next) {
+    try {
+      const surveys = await Survey.find();
+      res.status(200).send(surveys);
+    } catch (err) {
+      return next(err);
+    }
+  };
 
-exports.delete = function(req, res, next) {
-    var survey = new Survey(req.body);
-    survey.remove({_id: req.body.id}, function(err){
-        if(err){
-            res.send(err)
-        }else{
-            res.send({data:"Deleted succesfuly"})
-        }
-    });
-};
+  exports.delete = async function (req, res, next) {
+    try {
+      const id = sanitize(req.body.id);
+      const deletedSurvey = await Survey.findByIdAndDelete(id);
+      if (!deletedSurvey) {
+        return res.status(404).send({ message: 'Survey not found' });
+      }
+      res.status(200).send({ message: 'Survey deleted successfully' });
+    } catch (err) {
+      return next(err);
+    }
+  };

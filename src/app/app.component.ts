@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Curvey-Project';
 
-  constructor(private router: Router) { }
+  constructor(private auth: AuthService, private router: Router) { }
 
-
+  
 }

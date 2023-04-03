@@ -1,17 +1,10 @@
-var express = require('express');
-var router = express.Router();
-var survey = require('../controllers/survey.controller');
+const express = require('express');
+const router = express.Router();
+const surveyController = require('../controllers/survey.controller');
 
-router.route("/")
-    .get(survey.list);
-
-router.route('/create')
-    .post(survey.create);
-
-router.route('/update')
-    .post(survey.edit);
-
-router.route("/delete")
-    .post(survey.delete);
+router.get('/', surveyController.list);
+router.post('/create', surveyController.create);
+router.post('/update', surveyController.edit);
+router.delete('/delete', surveyController.delete);
 
 module.exports = router;

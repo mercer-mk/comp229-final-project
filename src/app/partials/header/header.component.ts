@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
+import{ ActivatedRoute} from '@angular/router';
+import { AuthService } from '../../auth.service';
 import { Router } from '@angular/router';
 
 
@@ -12,9 +12,12 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   isLogged: boolean;
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(public auth: AuthService,private router: Router, private route:ActivatedRoute) { }
 
+  logout() {
+    this.auth.logout();
+  }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
 }

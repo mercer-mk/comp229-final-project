@@ -1,5 +1,5 @@
 module.exports = {
-    "apiSecret" : "u4$L9!n5#B3&D1@",
+    "apiSecret" : "sdfs$nsndf@12fgdfd",
     "permissionLevels" : {
         "Surfer" : 1,
         "Member" : 32768,

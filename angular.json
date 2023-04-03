@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Survey-Project:build"
+            "browserTarget": "Curvey-Project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Survey-Project:build:production"
+              "browserTarget": "Curvey-Project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Survey-Project:build"
+            "browserTarget": "Curvey-Project:build"
           }
         },
         "test": {
@@ -101,18 +101,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Survey-Project:serve"
+            "devServerTarget": "Curvey-Project:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "survey-Project:serve:production"
+              "devServerTarget": "Curvey-Project:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Survey-Project",
+  "defaultProject": "Curvey-Project",
   "cli": {
     "analytics": "8dedc2f9-1fad-4406-b62e-901c61047ed1"
   }
