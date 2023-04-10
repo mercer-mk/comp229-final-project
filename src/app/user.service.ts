@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserService {
-  private readonly baseUrl = 'http://localhost:8000/api/users';
+  private readonly baseUrl = 'https://final-project-jl4d.onrender.com/api/users';
 
   constructor(private httpClient: HttpClient) { }
 

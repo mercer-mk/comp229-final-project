@@ -2934,7 +2934,7 @@
         }, {
           key: "getSurveys",
           value: function getSurveys(surveyId) {
-            return this.httpClient.get("".concat(this.baseUrl, "/list/").concat(surveyId));
+            return this.httpClient.post("".concat(this.baseUrl, "/list/").concat(surveyId), surveyId);
           }
         }, {
           key: "deleteSurvey",

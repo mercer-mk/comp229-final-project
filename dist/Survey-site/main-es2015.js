@@ -1382,7 +1382,7 @@ class CommonService {
         return this.httpClient.post(`${this.baseUrl}/${survey._id}`, survey);
     }
     getSurveys(surveyId) {
-        return this.httpClient.get(`${this.baseUrl}/list/${surveyId}`);
+        return this.httpClient.post(`${this.baseUrl}/list/${surveyId}`, surveyId);
     }
     deleteSurvey(id) {
         return this.httpClient.post(`${this.baseUrl}/delete`, { _id: id });
