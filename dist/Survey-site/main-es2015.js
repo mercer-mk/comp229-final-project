@@ -699,7 +699,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-    apiUrl: 'http://localhost:8000/api'
+    // apiUrl: 'http://localhost:8000/api'
+    apiUrl: 'https://final-project-jl4d.onrender.com/api'
 };
 /*
  * For easier debugging in development mode, you can import the following file
@@ -1373,7 +1374,7 @@ __webpack_require__.r(__webpack_exports__);
 class CommonService {
     constructor(httpClient) {
         this.httpClient = httpClient;
-        this.baseUrl = 'http://localhost:8000/api/survey_response';
+        this.baseUrl = 'https://final-project-jl4d.onrender.com/api/survey_response';
     }
     saveSurvey(survey) {
         return this.httpClient.post(this.baseUrl, survey);
@@ -1506,7 +1507,7 @@ __webpack_require__.r(__webpack_exports__);
 class SurveyService {
     constructor(httpClient) {
         this.httpClient = httpClient;
-        this.baseUrl = 'http://localhost:8000/api';
+        this.baseUrl = 'https://final-project-jl4d.onrender.com/api';
     }
     saveSurvey(survey) {
         return this.httpClient.post(`${this.baseUrl}/survey/create`, survey);
@@ -1937,7 +1938,7 @@ __webpack_require__.r(__webpack_exports__);
 class UserService {
     constructor(httpClient) {
         this.httpClient = httpClient;
-        this.baseUrl = 'http://localhost:8000/api/users';
+        this.baseUrl = 'https://final-project-jl4d.onrender.com/api/users';
     }
     saveUser(user) {
         return this.httpClient.post(`${this.baseUrl}`, user);

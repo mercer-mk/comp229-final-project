@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CommonService {
-  private readonly baseUrl = 'https://final-project-jl4d.onrender.com/api/survey_response';
+  private readonly baseUrl = 'http://localhost:8000/api/survey_response';
 
   constructor(private httpClient: HttpClient) { }
 

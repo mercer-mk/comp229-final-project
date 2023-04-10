@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class SurveyService {
-  private readonly baseUrl = 'https://final-project-jl4d.onrender.com/api';
+  private readonly baseUrl = 'http://localhost:8000/api';
 
   constructor(private httpClient: HttpClient) { }
 
