@@ -1580,7 +1580,7 @@
       var environment = {
         production: false,
         // apiUrl: 'http://localhost:8000/api'
-        apiUrl: 'https://final-project-jl4d.onrender.com/api'
+        apiUrl: 'http://localhost:8000/api'
       };
       /*
        * For easier debugging in development mode, you can import the following file
@@ -2919,7 +2919,7 @@
           _classCallCheck(this, CommonService);
 
           this.httpClient = httpClient;
-          this.baseUrl = 'https://final-project-jl4d.onrender.com/api/survey_response';
+          this.baseUrl = 'http://localhost:8000/api/survey_response';
         }
 
         _createClass(CommonService, [{
@@ -3227,7 +3227,7 @@
           _classCallCheck(this, SurveyService);
 
           this.httpClient = httpClient;
-          this.baseUrl = 'https://final-project-jl4d.onrender.com/api';
+          this.baseUrl = 'http://localhost:8000/api';
         }
 
         _createClass(SurveyService, [{
@@ -4215,7 +4215,7 @@
           _classCallCheck(this, UserService);
 
           this.httpClient = httpClient;
-          this.baseUrl = 'https://final-project-jl4d.onrender.com/api/users';
+          this.baseUrl = 'http://localhost:8000/api/users';
         }
 
         _createClass(UserService, [{

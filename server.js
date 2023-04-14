@@ -54,7 +54,7 @@ app.use("/api/survey", surveyRouter);
 app.use("/api/survey_response", surveyResponseRouter);
 
 app.get("*", (request, response) => {
-  response.sendFile(path.join(__dirname, "/dist/Survey-site/", "index.html"));
+  response.sendFile(path.join(__dirname, "dist/Survey-site/index.html"));
 });
 
 var server = app.listen(process.env.PORT || 8000, function () {
