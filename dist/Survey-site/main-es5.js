@@ -2510,6 +2510,12 @@
       var _pages_survey_management_survey_management_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
       /*! ./pages/survey-management/survey-management.component */
       "74Er");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(
+      /*! @angular/common */
+      "ofXK");
 
       function tokenGetter() {
         return localStorage.getItem('access_token');
@@ -2527,7 +2533,10 @@
         factory: function AppModule_Factory(t) {
           return new (t || AppModule)();
         },
-        providers: [_common_service__WEBPACK_IMPORTED_MODULE_7__["CommonService"], _survey_service__WEBPACK_IMPORTED_MODULE_8__["SurveyService"], _user_service__WEBPACK_IMPORTED_MODULE_9__["UserService"], _auth_service__WEBPACK_IMPORTED_MODULE_10__["AuthService"], _auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]],
+        providers: [_common_service__WEBPACK_IMPORTED_MODULE_7__["CommonService"], _survey_service__WEBPACK_IMPORTED_MODULE_8__["SurveyService"], _user_service__WEBPACK_IMPORTED_MODULE_9__["UserService"], _auth_service__WEBPACK_IMPORTED_MODULE_10__["AuthService"], _auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"], {
+          provide: _angular_common__WEBPACK_IMPORTED_MODULE_26__["LocationStrategy"],
+          useClass: _angular_common__WEBPACK_IMPORTED_MODULE_26__["HashLocationStrategy"]
+        }],
         imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"], _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_5__["JwtModule"].forRoot({
           config: {
             tokenGetter: tokenGetter
@@ -2554,7 +2563,10 @@
                 tokenGetter: tokenGetter
               }
             }), _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"]],
-            providers: [_common_service__WEBPACK_IMPORTED_MODULE_7__["CommonService"], _survey_service__WEBPACK_IMPORTED_MODULE_8__["SurveyService"], _user_service__WEBPACK_IMPORTED_MODULE_9__["UserService"], _auth_service__WEBPACK_IMPORTED_MODULE_10__["AuthService"], _auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"]],
+            providers: [_common_service__WEBPACK_IMPORTED_MODULE_7__["CommonService"], _survey_service__WEBPACK_IMPORTED_MODULE_8__["SurveyService"], _user_service__WEBPACK_IMPORTED_MODULE_9__["UserService"], _auth_service__WEBPACK_IMPORTED_MODULE_10__["AuthService"], _auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"], {
+              provide: _angular_common__WEBPACK_IMPORTED_MODULE_26__["LocationStrategy"],
+              useClass: _angular_common__WEBPACK_IMPORTED_MODULE_26__["HashLocationStrategy"]
+            }],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]]
           }]
         }], null, null);
