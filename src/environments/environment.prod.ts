@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://my-survey.herokuapp.com/api'
+  apiUrl: 'https://comp229-final-project.vercel.app/api'
 };
