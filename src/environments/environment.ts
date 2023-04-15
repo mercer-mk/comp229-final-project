@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   // apiUrl: 'http://localhost:8000/api'
-  apiUrl: 'http://localhost:8000/api'
+  apiUrl: 'https://comp229-final-project.vercel.app/api'
 };
 /*
  * For easier debugging in development mode, you can import the following file

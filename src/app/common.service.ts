@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CommonService {
-  private readonly baseUrl = 'http://localhost:8000/api/survey_response';
+  private readonly baseUrl = 'https://comp229-final-project.vercel.app/api/survey_response';
 
   constructor(private httpClient: HttpClient) { }
 

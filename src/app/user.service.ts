@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserService {
-  private readonly baseUrl = 'http://localhost:8000/api/users';
+  private readonly baseUrl = 'https://comp229-final-project.vercel.app/api/users';
 
   constructor(private httpClient: HttpClient) { }
 

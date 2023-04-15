@@ -700,7 +700,7 @@ __webpack_require__.r(__webpack_exports__);
 const environment = {
     production: false,
     // apiUrl: 'http://localhost:8000/api'
-    apiUrl: 'http://localhost:8000/api'
+    apiUrl: 'https://comp229-final-project.vercel.app/api'
 };
 /*
  * For easier debugging in development mode, you can import the following file
@@ -1087,8 +1087,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_users_users_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./pages/users/users.component */ "Ag98");
 /* harmony import */ var _pages_edit_user_edit_user_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./pages/edit-user/edit-user.component */ "GYEh");
 /* harmony import */ var _pages_survey_management_survey_management_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./pages/survey-management/survey-management.component */ "74Er");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/common */ "ofXK");
-
 
 
 
@@ -1129,7 +1127,6 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector
         _user_service__WEBPACK_IMPORTED_MODULE_9__["UserService"],
         _auth_service__WEBPACK_IMPORTED_MODULE_10__["AuthService"],
         _auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"],
-        { provide: _angular_common__WEBPACK_IMPORTED_MODULE_26__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_26__["HashLocationStrategy"] }
     ], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
@@ -1196,7 +1193,6 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector
                     _user_service__WEBPACK_IMPORTED_MODULE_9__["UserService"],
                     _auth_service__WEBPACK_IMPORTED_MODULE_10__["AuthService"],
                     _auth_guard__WEBPACK_IMPORTED_MODULE_11__["AuthGuard"],
-                    { provide: _angular_common__WEBPACK_IMPORTED_MODULE_26__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_26__["HashLocationStrategy"] }
                 ],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]],
             }]
@@ -1378,7 +1374,7 @@ __webpack_require__.r(__webpack_exports__);
 class CommonService {
     constructor(httpClient) {
         this.httpClient = httpClient;
-        this.baseUrl = 'http://localhost:8000/api/survey_response';
+        this.baseUrl = 'https://comp229-final-project.vercel.app/api/survey_response';
     }
     saveSurvey(survey) {
         return this.httpClient.post(this.baseUrl, survey);
@@ -1511,7 +1507,7 @@ __webpack_require__.r(__webpack_exports__);
 class SurveyService {
     constructor(httpClient) {
         this.httpClient = httpClient;
-        this.baseUrl = 'http://localhost:8000/api';
+        this.baseUrl = 'https://comp229-final-project.vercel.app/api';
     }
     saveSurvey(survey) {
         return this.httpClient.post(`${this.baseUrl}/survey/create`, survey);
@@ -1942,7 +1938,7 @@ __webpack_require__.r(__webpack_exports__);
 class UserService {
     constructor(httpClient) {
         this.httpClient = httpClient;
-        this.baseUrl = 'http://localhost:8000/api/users';
+        this.baseUrl = 'https://comp229-final-project.vercel.app/api/users';
     }
     saveUser(user) {
         return this.httpClient.post(`${this.baseUrl}`, user);
