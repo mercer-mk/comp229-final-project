@@ -36,7 +36,7 @@ var distDir = __dirname + "/dist/Survey-site/";
 app.use(express.static(distDir));
 
 app.use(function (req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", "https://comp229-final-project-4gdji8ay6-mercer-mk.vercel.app/");
   res.setHeader(
     "Access-Control-Allow-Methods",
     "GET, POST, OPTIONS, PUT, PATCH, DELETE"
